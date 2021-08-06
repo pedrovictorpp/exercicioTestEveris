@@ -1,4 +1,4 @@
-package test.java.testesWeb.com.exercicioTeste.pages;
+package testesWeb.com.exercicioTeste.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

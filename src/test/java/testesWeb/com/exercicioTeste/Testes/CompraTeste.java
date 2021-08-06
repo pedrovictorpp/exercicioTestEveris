@@ -1,15 +1,15 @@
-package test.java.testesWeb.com.exercicioTeste.Testes;
+package testesWeb.com.exercicioTeste.Testes;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import test.java.testesWeb.com.exercicioTeste.pages.AutenticarPage;
-import test.java.testesWeb.com.exercicioTeste.pages.CartPage;
-import test.java.testesWeb.com.exercicioTeste.pages.IndexPage;
-import test.java.testesWeb.com.exercicioTeste.pages.ProdutoPage;
+import testesWeb.com.exercicioTeste.pages.AutenticarPage;
+import testesWeb.com.exercicioTeste.pages.CartPage;
+import testesWeb.com.exercicioTeste.pages.IndexPage;
+import testesWeb.com.exercicioTeste.pages.ProdutoPage;
 
 public class CompraTeste {
 
@@ -32,7 +32,6 @@ public class CompraTeste {
 		indexPage.visitarHomePage(driver);
 		produtoPage.visitarPaginaProduto(1, driver);
 		produtoPage.adicionarAoCarrinho(2);
-		
 
 		// QUANDO acessar o carrinho de compras
 		indexPage.visitarHomePage(driver);
@@ -49,14 +48,14 @@ public class CompraTeste {
 
 	}
 
-	@Before
+	@BeforeEach
 	public void init() {
 		System.setProperty("webdriver.chrome.driver", "C:/webDriver/chromedriver.exe");
 		driver.manage().window().maximize();
 
 	}
 
-	@After
+	@AfterEach
 	public void quit() {
 		driver.close();
 
